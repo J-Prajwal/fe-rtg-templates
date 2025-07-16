@@ -1,4 +1,6 @@
-# React + TypeScript + Vite
+# fe-rtg-templates
+
+<!-- Test comment for Husky verification -->
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
