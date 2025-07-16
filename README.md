@@ -2,6 +2,7 @@
 
 <!-- Test comment for Husky verification -->
 <!-- Second test comment -->
+<!-- Third test comment - updated config -->
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
