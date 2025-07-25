@@ -5,7 +5,7 @@ import { templates } from '../../../utils/template';
 import { TemplateCard } from './TemplateCard';
 
 const TemplateGrid = () => {
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchTerm, setSearchTerm] = useState<string>('');
 
   const filteredTemplates = templates.filter(
     template =>
