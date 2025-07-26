@@ -36,7 +36,7 @@ const FlagOptions = () => {
 
   const handleCopyExample = async () => {
     await navigator.clipboard.writeText(
-      'npx get-template react my-app --typescript --tailwind --router --testing'
+      'npx rtg-template react my-app --typescript --tailwind --router --testing'
     );
     setCopiedExample(true);
     setTimeout(() => setCopiedExample(false), 2000);
@@ -180,7 +180,7 @@ const FlagOptions = () => {
                 </Button>
               </div>
               <code className="text-green-400 font-mono text-lg block break-all leading-relaxed">
-                npx get-template react my-app --typescript --tailwind --router
+                npx rtg-template react my-app --typescript --tailwind --router
                 --testing
               </code>
             </div>

@@ -15,7 +15,7 @@ A powerful CLI tool for quickly scaffolding full-stack project templates with yo
 
 ```bash
 # Use via npx (recommended)
-npx get-template
+npx rtg-template
 
 # Or install globally
 npm install -g get-template
@@ -25,12 +25,12 @@ npm install -g get-template
 
 ```bash
 # Interactive mode - choose your stack step by step
-npx get-template
+npx rtg-template
 
 # Direct template usage
-npx get-template react my-react-app --typescript --tailwind
-npx get-template next my-next-app --auth
-npx get-template node-api my-api --mongodb
+npx rtg-template react my-react-app --typescript --tailwind
+npx rtg-template next my-next-app --auth
+npx rtg-template node-api my-api --mongodb
 ```
 
 ## Available Templates 📋
@@ -49,7 +49,7 @@ npx get-template node-api my-api --mongodb
 ### Interactive Mode
 
 ```bash
-npx get-template
+npx rtg-template
 # Follow the prompts to select your template and options
 ```
 
@@ -57,23 +57,23 @@ npx get-template
 
 ```bash
 # React app with TypeScript and Tailwind
-npx get-template react my-app --typescript --tailwind
+npx rtg-template react my-app --typescript --tailwind
 
 # Next.js app with authentication
-npx get-template next my-next-app --auth --typescript
+npx rtg-template next my-next-app --auth --typescript
 
 # Node.js API with MongoDB
-npx get-template node-api my-api --mongodb --typescript
+npx rtg-template node-api my-api --mongodb --typescript
 
 # NestJS with Prisma and PostgreSQL
-npx get-template nestjs my-nest-app --prisma --postgres
+npx rtg-template nestjs my-nest-app --prisma --postgres
 ```
 
 ### Custom Repository
 
 ```bash
 # Use a custom template repository
-npx get-template react my-app --repo username/my-custom-template
+npx rtg-template react my-app --repo username/my-custom-template
 ```
 
 ## CLI Options 🛠️
@@ -225,10 +225,10 @@ You can use custom templates from any Git repository:
 
 ```bash
 # GitHub shorthand
-npx get-template react my-app --repo username/my-react-template
+npx rtg-template react my-app --repo username/my-react-template
 
 # Full Git URL
-npx get-template react my-app --repo https://github.com/username/my-react-template
+npx rtg-template react my-app --repo https://github.com/username/my-react-template
 ```
 
 ### Template Repository Structure

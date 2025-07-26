@@ -17,7 +17,7 @@ interface ILegendItem {
 }
 
 const Hero = () => {
-  const mainCommand: string = 'npx get-template react my-app';
+  const mainCommand: string = 'npx rtg-template react my-app';
   const [isCopied, setIsCopied] = useState<boolean>(false);
 
   const legendMap: ILegendItem[] = [
