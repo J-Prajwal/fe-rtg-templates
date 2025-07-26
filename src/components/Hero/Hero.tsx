@@ -120,8 +120,8 @@ const Hero = () => {
               <Button
                 onClick={copyToClipboard}
                 variant="ghost"
-                size="sm"
-                className="text-gray-400 hover:text-green-400 hover:bg-gray-700/50 transition-all duration-200 ml-4"
+                size="lg"
+                className="text-gray-400 hover:text-green-400 hover:bg-gray-700/50 transition-all duration-200 ml-4 h-12 w-12"
               >
                 {isCopied ? (
                   <Check className="w-5 h-5" />

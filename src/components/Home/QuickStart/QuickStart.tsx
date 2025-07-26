@@ -69,7 +69,7 @@ export const QuickStart = () => {
 
                 {/* Step Content */}
                 <Card className="flex-1 hover:shadow-xl transition-all duration-500 bg-gradient-to-br from-white via-gray-50 to-green-50/20 hover:from-green-50/30 hover:via-white hover:to-blue-50/30 border-0 shadow-lg">
-                  <CardHeader className="pb-4">
+                  <CardHeader className="">
                     <CardTitle className="flex items-center gap-3 text-xl font-bold text-gray-900">
                       {index === 0 && (
                         <Terminal className="w-6 h-6 text-green-600" />
@@ -120,10 +120,16 @@ export const QuickStart = () => {
                 </Card>
 
                 {/* Arrow */}
-                {index < quickStartSteps.length - 1 && (
+                {index < quickStartSteps.length - 1 ? (
                   <div className="flex-shrink-0 mt-8">
                     <div className="w-8 h-8 bg-gradient-to-r from-green-500 to-blue-600 rounded-full flex items-center justify-center shadow-lg">
                       <ArrowRight className="w-4 h-4 text-white" />
+                    </div>
+                  </div>
+                ) : (
+                  <div className="flex-shrink-0 mt-8">
+                    <div className="w-8 h-8 bg-gradient-to-r from-green-500 to-blue-600 rounded-full flex items-center justify-center shadow-lg">
+                      <Check className="w-4 h-4 text-white" />
                     </div>
                   </div>
                 )}

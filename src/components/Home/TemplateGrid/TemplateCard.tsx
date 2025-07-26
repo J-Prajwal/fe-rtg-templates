@@ -49,17 +49,17 @@ export const TemplateCard = ({
       <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-lg" />
 
       <CardHeader className="relative z-10 pb-4">
-        <CardTitle className="text-xl font-bold text-gray-900 group-hover:text-blue-900 transition-colors duration-300">
+        <CardTitle className="text-xl font-bold text-gray-900 group-hover:text-blue-900 transition-colors duration-300 h-12">
           {title}
         </CardTitle>
-        <CardDescription className="text-gray-600 leading-relaxed">
+        <CardDescription className="text-gray-600 leading-relaxed h-8">
           {description}
         </CardDescription>
       </CardHeader>
 
       <CardContent className="relative z-10 space-y-4">
         {/* Tags */}
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap gap-2 h-6 flex-col align-middle">
           {tags.slice(0, 4).map(tag => (
             <Badge
               key={tag}
@@ -77,7 +77,7 @@ export const TemplateCard = ({
         </div>
 
         {/* Command Section */}
-        <div className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 rounded-xl p-4 border border-gray-700/50 shadow-inner">
+        <div className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 rounded-xl py-2 px-4 border border-gray-700/50 shadow-inner">
           <div className="flex items-center justify-between mb-2">
             <span className="text-xs text-gray-400 font-medium">Command</span>
             <Button
@@ -99,7 +99,7 @@ export const TemplateCard = ({
               )}
             </Button>
           </div>
-          <div className="relative">
+          <div className="relative h-12">
             <code className="text-green-400 font-mono text-sm break-all leading-relaxed">
               {command}
             </code>

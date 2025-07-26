@@ -9,9 +9,6 @@ const TemplateGrid = () => {
   const [searchTerm, setSearchTerm] = useState<string>('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
 
-  // Get unique categories from templates
-  const categories = ['all', 'react', 'next', 'node', 'nestjs', 'fastapi'];
-
   const filteredTemplates = templates.filter(template => {
     const matchesSearch =
       template.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -30,6 +27,8 @@ const TemplateGrid = () => {
     return matchesSearch && matchesCategory;
   });
 
+  // Todo: Once ready the other template then open the below
+  const categories = ['all', 'react'];
   const getCategoryIcon = (category: string) => {
     switch (category) {
       case 'react':
@@ -48,7 +47,10 @@ const TemplateGrid = () => {
   };
 
   return (
-    <section className="py-24 px-6 bg-gradient-to-br from-slate-50 via-white to-blue-50/30">
+    <section
+      className="py-24 px-6 bg-gradient-to-br from-slate-50 via-white to-blue-50/30"
+      id="templates"
+    >
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 bg-blue-50 text-blue-700 px-4 py-2 rounded-full text-sm font-medium mb-6">
@@ -66,7 +68,7 @@ const TemplateGrid = () => {
         </div>
 
         {/* Search and Filter */}
-        <div className="max-w-4xl mx-auto mb-12 space-y-6">
+        <div className="max-w-4xl mx-auto mb-10 space-y-6">
           <div className="relative">
             <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
             <Input
@@ -79,7 +81,7 @@ const TemplateGrid = () => {
             />
           </div>
 
-          {/* Category Filter */}
+          {/* Todo: Once ready the other template then open the Category Filter */}
           <div className="flex flex-wrap gap-3 justify-center">
             {categories.map(category => (
               <Button
