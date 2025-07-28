@@ -34,7 +34,7 @@ export const TemplateCard = ({
   };
 
   return (
-    <Card className="group relative overflow-hidden border-0 shadow-lg hover:shadow-2xl transition-all duration-500 bg-gradient-to-br from-white via-gray-50 to-blue-50/30 hover:from-blue-50/50 hover:via-white hover:to-purple-50/50">
+    <Card className="group relative overflow-hidden border-0">
       {/* Popular Badge */}
       {popular && (
         <div className="absolute -top-2 -right-2 z-10">
@@ -44,9 +44,6 @@ export const TemplateCard = ({
           </div>
         </div>
       )}
-
-      {/* Gradient Border Effect */}
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-lg" />
 
       <CardHeader className="relative z-10 pb-4">
         <CardTitle className="text-xl font-bold text-gray-900 group-hover:text-blue-900 transition-colors duration-300 h-12">
@@ -100,7 +97,7 @@ export const TemplateCard = ({
             </Button>
           </div>
           <div className="relative h-12">
-            <code className="text-green-400 font-mono text-sm break-all leading-relaxed">
+            <code className="text-green-400 font-mono text-xs md:text-sm break-all leading-relaxed">
               {command}
             </code>
           </div>
@@ -108,7 +105,7 @@ export const TemplateCard = ({
 
         {/* Action Button */}
         <Button
-          className="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-medium transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+          className="w-full bg-gradient-to-r  hover:to-purple-700 text-white font-medium transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
           onClick={copyToClipboard}
         >
           <ExternalLink className="w-4 h-4 mr-2" />

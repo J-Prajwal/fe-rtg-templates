@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Search, Sparkles, Zap, Code, Database, Shield } from 'lucide-react';
+import { Search, Sparkles, Code } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { templates } from '../../../utils/template';
@@ -27,19 +27,10 @@ const TemplateGrid = () => {
     return matchesSearch && matchesCategory;
   });
 
-  // Todo: Once ready the other template then open the below
   const categories = ['all', 'react'];
   const getCategoryIcon = (category: string) => {
     switch (category) {
       case 'react':
-        return <Code className="w-4 h-4" />;
-      case 'next':
-        return <Zap className="w-4 h-4" />;
-      case 'node':
-        return <Database className="w-4 h-4" />;
-      case 'nestjs':
-        return <Shield className="w-4 h-4" />;
-      case 'fastapi':
         return <Code className="w-4 h-4" />;
       default:
         return <Sparkles className="w-4 h-4" />;
@@ -77,11 +68,10 @@ const TemplateGrid = () => {
               onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
                 setSearchTerm(e.target.value)
               }
-              className="pl-12 h-14 text-lg transition-all duration-200 ring-0 focus:ring-0 focus:outline-none focus:border-none"
+              className="pl-12 h-14 text-lg"
             />
           </div>
 
-          {/* Todo: Once ready the other template then open the Category Filter */}
           <div className="flex flex-wrap gap-3 justify-center">
             {categories.map(category => (
               <Button
@@ -89,7 +79,7 @@ const TemplateGrid = () => {
                 variant={selectedCategory === category ? 'default' : 'outline'}
                 size="sm"
                 onClick={() => setSelectedCategory(category)}
-                className={`flex items-center gap-2 transition-all duration-200 ${
+                className={`flex items-center gap-2 ${
                   selectedCategory === category
                     ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white shadow-lg'
                     : 'hover:bg-gray-50'
@@ -116,11 +106,7 @@ const TemplateGrid = () => {
         {/* Templates Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredTemplates.map((template, index) => (
-            <div
-              key={index}
-              className="transform hover:scale-105 transition-all duration-300"
-              style={{ animationDelay: `${index * 100}ms` }}
-            >
+            <div key={index}>
               <TemplateCard
                 title={template.title}
                 description={template.description}

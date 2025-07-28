@@ -8,7 +8,7 @@ import {
 } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Check, Copy } from 'lucide-react';
+import { Check, Copy, Sparkles } from 'lucide-react';
 import { flagCategories } from '@/utils/template';
 
 const FlagOptions = () => {
@@ -46,8 +46,8 @@ const FlagOptions = () => {
     <section className="py-24 px-6 bg-gradient-to-br from-gray-50 via-white to-slate-50">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 bg-purple-50 text-purple-700 px-4 py-2 rounded-full text-sm font-medium mb-6">
-            <span className="w-2 h-2 bg-purple-500 rounded-full"></span>
+          <div className="inline-flex items-center gap-2 bg-blue-50 text-blue-700 px-4 py-2 rounded-full text-sm font-medium mb-6">
+            <Sparkles className="w-4 h-4" />
             Customize Your Template
           </div>
           <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-gray-900 via-purple-800 to-blue-800 bg-clip-text text-transparent">
