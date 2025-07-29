@@ -48,7 +48,17 @@ const Hero = () => {
   };
 
   return (
-    <div className="h-auto sm:h-screen relative w-full flex flex-col justify-center items-center overflow-hidden pt-24">
+    <div
+      className="h-auto sm:h-screen relative w-full flex flex-col justify-center items-center overflow-hidden pt-24"
+      style={{
+        backgroundColor: '#f8f8f9',
+        backgroundImage: `
+    linear-gradient(#f2f2f7 2px, transparent 2px),
+    linear-gradient(to right, #f2f2f7 2px, #f8f8f9 2px)
+    `,
+        backgroundSize: '36px 36px',
+      }}
+    >
       {/* Content */}
       <div className="relative z-10 max-w-6xl mx-auto px-6 text-center">
         {/* Badge */}

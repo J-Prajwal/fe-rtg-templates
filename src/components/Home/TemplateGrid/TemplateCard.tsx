@@ -1,4 +1,4 @@
-import { Copy, Check, Star, ExternalLink } from 'lucide-react';
+import { Copy, Check, Star } from 'lucide-react';
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import {
@@ -103,14 +103,14 @@ export const TemplateCard = ({
           </div>
         </div>
 
-        {/* Action Button */}
+        {/* Action Button
         <Button
-          className="w-full bg-gradient-to-r  hover:to-purple-700 text-white font-medium transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+          className="w-full text-black bg-gradient-to-r hover:to-purple-700 hover:text-white font-medium transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
           onClick={copyToClipboard}
         >
           <ExternalLink className="w-4 h-4 mr-2" />
           Use Template
-        </Button>
+        </Button> */}
       </CardContent>
 
       {/* Hover Effect Overlay */}

@@ -67,7 +67,7 @@ const FlagOptions = () => {
               variant={selectedCategory === category ? 'default' : 'outline'}
               size="sm"
               onClick={() => setSelectedCategory(category)}
-              className={`flex items-center gap-2 transition-all duration-200 ${
+              className={`flex items-center gap-2 cursor-pointer transition-all duration-300 ${
                 selectedCategory === category
                   ? 'bg-gradient-to-r from-purple-500 to-blue-600 text-white shadow-lg'
                   : 'hover:bg-gray-50'
