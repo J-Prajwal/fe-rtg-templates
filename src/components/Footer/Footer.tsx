@@ -13,22 +13,18 @@ const Footer = () => {
             </p>
             <div className="flex gap-3">
               <a
-                href="#"
+                href="https://github.com/J-Prajwal/rtg-templates"
+                target="_blank"
                 className="text-gray-400 hover:text-white transition-colors"
               >
                 GitHub
               </a>
               <a
-                href="#"
+                href="https://www.npmjs.com/package/rtg-template"
+                target="_blank"
                 className="text-gray-400 hover:text-white transition-colors"
               >
-                Twitter
-              </a>
-              <a
-                href="#"
-                className="text-gray-400 hover:text-white transition-colors"
-              >
-                Docs
+                NPM
               </a>
             </div>
           </div>

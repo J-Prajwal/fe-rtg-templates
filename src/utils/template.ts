@@ -1,62 +1,55 @@
-import { Code, Palette, Package, Database, Shield } from 'lucide-react';
+import { Code, Palette, Package, Database } from 'lucide-react';
 
 export const templates = [
   {
     title: 'React + TypeScript + Tailwind',
     description: 'The most popular combination for modern React development',
-    command: 'npx rtg-template react my-react-app --typescript --tailwind',
+    command: 'npx rtg-template react-ts my-app --tailwind',
     tags: ['React', 'TypeScript', 'Tailwind CSS', 'Vite'],
     // popular: true,
   },
   {
     title: 'React + JavaScript + Tailwind',
     description: 'Quick setup with Tailwind CSS styling',
-    command: 'npx rtg-template react my-react-app --tailwind',
+    command: 'npx rtg-template react my-app --tailwind',
     tags: ['React', 'JavaScript', 'Tailwind CSS', 'Vite'],
   },
   {
     title: 'React + TypeScript + Styled Components',
     description: 'Type-safe React with CSS-in-JS styling',
-    command:
-      'npx rtg-template react my-react-app --typescript --styled-components',
+    command: 'npx rtg-template react-ts my-app --styled-components',
     tags: ['React', 'TypeScript', 'Styled Components', 'CSS-in-JS'],
   },
   {
     title: 'React + Material-UI',
     description: "React with Google's Material Design components",
-    command: 'npx rtg-template react my-react-app --mui',
+    command: 'npx rtg-template react my-app --mui',
     tags: ['React', 'Material-UI', 'Components', 'Design System'],
   },
   {
     title: 'React + Chakra UI',
     description: 'Simple, modular and accessible component library',
-    command: 'npx rtg-template react my-react-app --chakra',
+    command: 'npx rtg-template react my-app --chakra',
     tags: ['React', 'Chakra UI', 'Accessibility', 'Components'],
   },
   {
     title: 'React + Redux Toolkit',
     description: 'React with Redux for state management',
-    command: 'npx rtg-template react my-react-app --redux',
-    tags: ['React', 'Redux', 'State Management', 'TypeScript'],
-  },
-  {
-    title: 'React + React Router',
-    description: 'Single page application with routing',
-    command: 'npx rtg-template react my-react-app --router',
-    tags: ['React', 'React Router', 'SPA', 'Navigation'],
+    command: 'npx rtg-template react my-app --redux',
+    tags: ['React', 'Redux', 'State Management'],
   },
   {
     title: 'React TypeScript Template',
     description: 'React with TypeScript and modern tooling',
-    command: 'npx rtg-template react-ts my-react-app',
+    command: 'npx rtg-template react-ts my-app',
     tags: ['React', 'TypeScript', 'Vite', 'Modern'],
   },
-  // {
-  //   title: 'React + React Query',
-  //   description: 'Powerful data synchronization for React',
-  //   command: 'npx rtg-template react my-react-app --react-query',
-  //   tags: ['React', 'React Query', 'Data Fetching', 'Cache'],
-  // },
+  {
+    title: 'React + Tanstack Query',
+    description: 'Powerful data synchronization for React',
+    command: 'npx rtg-template react my-react-app --react-query',
+    tags: ['React', 'React Query', 'Data Fetching', 'Cache'],
+  },
   // {
   //   title: 'Next.js Application',
   //   description: 'Full-stack React framework with server-side rendering',
@@ -159,16 +152,22 @@ export const flagCategories = [
       },
       { flag: '--mui', description: 'Material-UI component library' },
       { flag: '--chakra', description: 'Chakra UI for modular components' },
-      { flag: '--sass', description: 'Sass/SCSS for enhanced CSS' },
+      {
+        flag: '--sass',
+        description: 'Sass/SCSS for enhanced CSS',
+        isComingSoon: true,
+      },
     ],
   },
   {
-    title: 'Language',
+    title: 'Network Management',
     icon: Code,
-    description: 'Type safety and language preferences',
+    description: 'Manage API calls, cache, timeout etc.',
     flags: [
-      { flag: '--typescript', description: 'Add TypeScript for type safety' },
-      { flag: '--javascript', description: 'Use JavaScript (default)' },
+      {
+        flag: '--tanstack-query',
+        description: 'Configures Tanstack Query in your React App',
+      },
     ],
   },
   {
@@ -177,8 +176,16 @@ export const flagCategories = [
     description: 'Manage application state effectively',
     flags: [
       { flag: '--redux', description: 'Redux Toolkit for predictable state' },
-      { flag: '--zustand', description: 'Lightweight state management' },
-      { flag: '--context', description: 'React Context API setup' },
+      {
+        flag: '--zustand',
+        description: 'Lightweight state management',
+        isComingSoon: true,
+      },
+      {
+        flag: '--context',
+        description: 'React Context API setup',
+        isComingSoon: true,
+      },
     ],
   },
   // {
@@ -191,15 +198,15 @@ export const flagCategories = [
   //     { flag: '--apollo', description: 'Apollo Client for GraphQL' },
   //   ],
   // },
-  {
-    title: 'Routing',
-    icon: Package,
-    description: 'Navigation and routing solutions',
-    flags: [
-      { flag: '--router', description: 'React Router for SPA routing' },
-      { flag: '--reach-router', description: 'Reach Router (legacy support)' },
-    ],
-  },
+  // {
+  //   title: 'Routing',
+  //   icon: Package,
+  //   description: 'Navigation and routing solutions',
+  //   flags: [
+  //     { flag: '--router', description: 'React Router for SPA routing' },
+  //     { flag: '--reach-router', description: 'Reach Router (legacy support)' },
+  //   ],
+  // },
   // {
   //   title: 'Authentication',
   //   icon: Shield,
@@ -221,25 +228,26 @@ export const flagCategories = [
   //     { flag: '--prisma', description: 'Prisma ORM for database management' },
   //   ],
   // },
-  {
-    title: 'Testing & Quality',
-    icon: Shield,
-    description: 'Testing and code quality tools',
-    flags: [
-      { flag: '--testing', description: 'Jest and React Testing Library' },
-      { flag: '--eslint', description: 'ESLint for code quality' },
-      { flag: '--prettier', description: 'Prettier for code formatting' },
-      { flag: '--husky', description: 'Git hooks for quality gates' },
-    ],
-  },
+  // {
+  //   title: 'Testing & Quality',
+  //   icon: Shield,
+  //   description: 'Testing and code quality tools',
+  //   flags: [
+  //     { flag: '--testing', description: 'Jest and React Testing Library' },
+  //     { flag: '--eslint', description: 'ESLint for code quality' },
+  //     { flag: '--prettier', description: 'Prettier for code formatting' },
+  //     { flag: '--husky', description: 'Git hooks for quality gates' },
+  //   ],
+  // },
   {
     title: 'Project Setup',
     icon: Package,
     description: 'Project configuration options',
     flags: [
-      { flag: '--no-install', description: 'Skip dependency installation' },
-      { flag: '--no-git', description: 'Skip git initialization' },
       { flag: '--interactive', description: 'Run in interactive mode' },
+      { flag: '--no-install', description: 'Skip dependency installation' },
+      { flag: '--no-route', description: 'Skip router configuration' },
+      { flag: '--no-git', description: 'Skip git initialization' },
       { flag: '--repo', description: 'Use custom template repository' },
     ],
   },
@@ -250,7 +258,7 @@ export const quickStartSteps = [
     step: '1',
     title: 'Run the command',
     description: 'Execute the npx command with your desired flags',
-    command: 'npx rtg-template react my-app --typescript --tailwind',
+    command: 'npx rtg-template react-ts my-app --tailwind --redux',
   },
   {
     step: '2',
