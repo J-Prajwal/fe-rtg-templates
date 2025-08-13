@@ -106,12 +106,17 @@ const FlagOptions = () => {
                   {category.flags.map((flagInfo, flagIndex) => (
                     <div
                       key={flagIndex}
-                      className="group/flag p-4 rounded-lg border border-gray-200 hover:border-purple-300 hover:bg-purple-50/50 transition-all duration-300"
+                      className="group/flag p-4 rounded-lg border border-gray-200 hover:border-purple-300 hover:bg-purple-50/50 transition-all duration-300 relative"
                     >
                       <div className="flex items-start justify-between mb-2">
                         <Badge className="font-mono text-xs bg-gray-900 text-green-400 hover:bg-gray-800 transition-colors duration-200">
                           {flagInfo.flag}
                         </Badge>
+                        {flagInfo?.isComingSoon && (
+                          <Badge className="font-mono text-xs bg-gradient-to-r from-purple-500 to-blue-600 absolute -top-3 -right-2">
+                            Coming Soon 🤩
+                          </Badge>
+                        )}
                         <Button
                           size="sm"
                           variant="ghost"
@@ -180,8 +185,8 @@ const FlagOptions = () => {
                 </Button>
               </div>
               <code className="text-green-400 font-mono text-lg block break-all leading-relaxed">
-                npx rtg-template react my-app --typescript --tailwind --router
-                --testing
+                npx rtg-template react-ts my-app --tailwind --redux
+                --tanstack-query
               </code>
             </div>
 
@@ -191,21 +196,23 @@ const FlagOptions = () => {
                   <span className="text-blue-600 font-bold text-sm">1</span>
                 </div>
                 <p className="text-sm font-medium text-gray-700">
-                  React Template
+                  React + TypeScript
                 </p>
               </div>
               <div className="text-center p-4 bg-white rounded-xl shadow-md">
                 <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-2">
                   <span className="text-purple-600 font-bold text-sm">2</span>
                 </div>
-                <p className="text-sm font-medium text-gray-700">TypeScript</p>
+                <p className="text-sm font-medium text-gray-700">
+                  Tailwind CSS
+                </p>
               </div>
               <div className="text-center p-4 bg-white rounded-xl shadow-md">
                 <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-2">
                   <span className="text-green-600 font-bold text-sm">3</span>
                 </div>
                 <p className="text-sm font-medium text-gray-700">
-                  Tailwind CSS
+                  State Management
                 </p>
               </div>
               <div className="text-center p-4 bg-white rounded-xl shadow-md">
@@ -213,7 +220,7 @@ const FlagOptions = () => {
                   <span className="text-orange-600 font-bold text-sm">4</span>
                 </div>
                 <p className="text-sm font-medium text-gray-700">
-                  Testing Setup
+                  Network Management
                 </p>
               </div>
             </div>
